@@ -7,50 +7,44 @@ choi::choi()
     Robot b;
     player p;
 
-    if (p.display_p_choice() == b.display_b_choice())
-    {
-        cout << "Robot da chon " << b.display_b_choice() << endl;
+    string player_choice = p.display_p_choice();
+    string robot_choice = b.display_b_choice();
 
+    cout << "Robot da chon " << robot_choice << endl;
+
+    if (player_choice == robot_choice)
+    {
         cout << "Hoa roi -_- \n";
     }
-    
-    else if (p.display_p_choice() == "keo")
+    else if (player_choice == "keo")
     {
-        cout << "Robot da chon " << b.display_b_choice() << endl;
-
-        if (b.display_b_choice() == "bua")
+        if (robot_choice == "bao")
         {
             cout << "Ta da thang ^.^ \n";
         }
-        else if(b.display_b_choice() == "bao")
+        else
         {
             cout << "Ta da thua T.T \n";
         }
     }
-    
-    else if (p.display_p_choice() == "bua")
+    else if (player_choice == "bua")
     {
-        cout << "Robot da chon " << b.display_b_choice() << endl;
-        
-        if (b.display_b_choice() == "bao")
+        if (robot_choice == "keo")
         {
             cout << "Ta da thang ^.^ \n";
         }
-        else if (b.display_b_choice() == "keo")
+        else
         {
             cout << "Ta da thua T.T \n";
         }
     }
-    
-    else
-    {   
-        cout << "Robot da chon " << b.display_b_choice() << endl;
-
-        if (b.display_b_choice() == "keo")
+    else if (player_choice == "bao")
+    {
+        if (robot_choice == "bua")
         {
             cout << "Ta da thang ^.^ \n";
         }
-        else if (b.display_b_choice() == "bua")
+        else
         {
             cout << "Ta da thua T.T \n";
         }
